@@ -119,6 +119,33 @@ A second benchmark was conducted using 1,000 synthetic 16-dimensional vectors.
 
 *Benchmark timings are measured in microseconds (µs). These results represent local experiments and are not universal performance guarantees.*
 
+### Benchmark at 10,000 Vectors
+
+A larger-scale benchmark was conducted using 10,000 synthetic 16-dimensional vectors.
+
+**Configuration**
+- Dataset size: 10,000 vectors
+- Vector dimensions: 16
+- Distance metric: Cosine
+- Top-k: 5
+- Measurements: 25 runs per algorithm
+
+**Average Search Latency**
+
+| Algorithm | Average Latency |
+|---|---:|
+| Brute Force | 827.92 µs |
+| KD-Tree | 4.52 µs |
+| HNSW | 44.56 µs |
+
+**Observations**
+- KD-Tree achieved the lowest average search latency in this experiment.
+- KD-Tree was approximately 183 times faster than Brute Force.
+- HNSW also showed substantially lower latency than Brute Force.
+- Brute Force latency increased significantly as the dataset grew.
+
+*Results are based on synthetic 16-dimensional vectors and local measurements. Actual performance depends on hardware, data distribution, query configuration, and index implementation.*
+
 ### Search Performance
 
 | Algorithm | Search Time |
