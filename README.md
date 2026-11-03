@@ -80,6 +80,38 @@ The application also supports three distance metrics:
 - Euclidean Distance
 - Manhattan Distance
 
+## Preliminary Benchmark Results
+
+The following benchmark was performed using the application's
+built-in benchmark endpoint.
+
+| Parameter | Value |
+|---|---|
+| Dataset size | 22 vectors |
+| Dimensions | 16 |
+| Top-K results | 5 |
+| Distance metric | Cosine Similarity |
+
+### Search Performance
+
+| Algorithm | Search Time |
+|---|---:|
+| Brute Force | 7 µs |
+| KD-Tree | 7 µs |
+| HNSW | 43 µs |
+
+**Observation:** In this small dataset test, Brute Force and KD-Tree
+recorded lower search times than HNSW.
+
+These are preliminary measurements from a single run. Performance
+may vary with dataset size, hardware, and system load. Larger-scale
+testing is required for a meaningful comparison.
+
+### Benchmark Command
+
+```powershell
+Invoke-RestMethod "http://localhost:8080/benchmark?v=0.9,0.8,0.7,0.6,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1&k=5&metric=cosine"
+
 ## Project Structure
 
 ```text
