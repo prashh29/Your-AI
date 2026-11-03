@@ -33,6 +33,20 @@ It combines three vector search algorithms, real text embeddings, and a local La
 | AI Architecture | Retrieval-Augmented Generation (RAG) |
 | Build Standard | C++17 |
 
+## Screenshots
+
+### Main Interface
+![Your AI Home](screenshots/home.png)
+
+### Vector Search
+![Vector Search](screenshots/vector-search.png)
+
+### Document Management
+![Document Management](screenshots/documents.png)
+
+### Document Question Answering
+![Document Q&A](screenshots/document-qa.png)
+
 ## How It Works
 
 Your AI follows a Retrieval-Augmented Generation pipeline:
