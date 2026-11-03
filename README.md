@@ -8,6 +8,10 @@ Your AI is an educational AI project that demonstrates how vector databases and 
 
 It combines three vector search algorithms, real text embeddings, and a local Large Language Model (LLM) to provide document-based question answering through a web interface.
 
+## System Architecture
+
+See the [System Architecture Diagram](docs/architecture.md) for an overview of the application's components and RAG workflow.
+
 ## Features
 
 - **Multiple Search Algorithms:** Implements HNSW, KD-Tree, and Brute Force search.
